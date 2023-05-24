@@ -1,0 +1,158 @@
+:root {
+  --main-bg-color: rgb(224, 224, 224);
+  --text-color: rgb(242, 242, 242);
+  --left-bg-color: rgb(31, 31, 31);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1500px;
+  height: 700px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 18px 0 rgb(139, 139, 139);
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--main-bg-color);
+}
+
+p {
+  margin: 0;
+  margin-top: 30px;
+  color: var(--main-bg-color);
+  font-size: 1.4rem;
+}
+
+.right-container {
+  object-position: 20%;
+  overflow: hidden;
+}
+
+.right-container img {
+  position: relative;
+  height: 100%;
+}
+
+.left-container {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.header-tab {
+  height: 100px;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+}
+
+.left-content {
+  flex: 1;
+  background-color: var(--left-bg-color);
+  padding: 50px;
+}
+
+.home,
+.menu,
+.contact {
+  height: 50px;
+  width: 150px;
+  border: 4px solid var(--left-bg-color);
+  border-style: double;
+  border-bottom: none;
+  color: var(--left-bg-color);
+  font-size: 1rem;
+  background-color: var(--main-bg-color);
+}
+
+button:hover {
+  cursor: pointer;
+  height: 51px;
+}
+
+.menu-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: 1s;
+}
+
+.left-dishes,
+.right-dishes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-dishes {
+  flex: 1;
+}
+
+.menu-container .dish-title {
+  margin: 0;
+}
+
+.dish-title,
+.dish-description {
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.left-dishes .dish-container {
+  border-right: solid 2px var(--main-bg-color);
+}
+
+.dish-description {
+  font-size: 1rem;
+}
+
+.dish-container {
+  padding: 0 30px;
+  height: 140px;
+}
+
+.opening-times .title {
+  margin: 0;
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.opening-times .hours {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+br {
+  content: "";
+  margin: 5px;
+  display: block;
+}
+
+.address,
+.phone {
+  color: var(--text-color);
+  margin-top: 50px;
+}
